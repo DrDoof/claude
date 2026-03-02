@@ -101,7 +101,7 @@ daily:
 
 ```
 Tier 1 Identity (500t): CLAUDE.md + .project-sync.yaml -> 프로젝트명, 목표, 기술 스택
-Tier 2 Operational (2000t): .omc/daily-state/<project>/knowledge/snapshots/latest.json
+Tier 2 Operational (2000t): .claude/context/daily-state/<project>/knowledge/snapshots/latest.json
 Tier 3 Deep (3000t): docs/ 핵심 문서 (README, PRD, 아키텍처)
 ```
 
