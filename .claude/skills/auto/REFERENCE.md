@@ -1556,7 +1556,7 @@ SendMessage(type="message", recipient="slack-analyst", content="Slack 채널 분
 ```
 
 **Step 4: 컨텍스트 파일 생성**
-`.omc/slack-context/<채널ID>.md` 생성 (프로젝트 개요, 핵심 결정사항, 관련 문서, 기술 스택, 미해결 이슈, 원본 메시지)
+`.claude/context/slack/<채널ID>.md` 생성 (프로젝트 개요, 핵심 결정사항, 관련 문서, 기술 스택, 미해결 이슈, 원본 메시지)
 
 **Step 5: 메인 워크플로우 실행**
 - 생성된 컨텍스트 파일을 Read하여 Phase 1 (PLAN)에 전달
@@ -1601,7 +1601,7 @@ SendMessage(type="message", recipient="gmail-analyst", content="Gmail 분석 요
 ```
 
 **Step 4: 컨텍스트 파일 생성**
-`.omc/gmail-context/<timestamp>.md` 생성
+`.claude/context/gmail/<timestamp>.md` 생성
 
 **Step 5: 후속 작업 분기**
 
