@@ -70,6 +70,16 @@ projects:
       - "브로드"
       - "broad"
 
+  toilet_door_sensor:
+    folder_id: "1QJ1D6oK-W2__iH0SHHY46Fppusbr8Urj"
+    subfolders:
+      documents: "1QJ1D6oK-W2__iH0SHHY46Fppusbr8Urj"
+    aliases:
+      - "door-sensor"
+      - "howmany"
+    cwd_patterns:
+      - "**/toilet_door_sensor/**"
+
 # 특수 폴더 (프로젝트가 아닌 용도별)
 special_folders:
   _개인:
@@ -90,6 +100,7 @@ governance:
       - "EBS"
       - "지지프로덕션"
       - "브로드스튜디오"
+      - "toilet_door_sensor"
       - "_개인"
       - "_아카이브"
     files_allowed: false  # 루트에 파일 존재 금지
