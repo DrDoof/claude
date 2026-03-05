@@ -51,6 +51,7 @@ Before issuing VERDICT, you MUST check all four gates:
 | QG2 | Acceptance Criteria 구체적 | 각 태스크에 명확하고 측정 가능한 완료 조건이 있음 |
 | QG3 | 모호어 0건 | "may", "might", "probably", "should" 등 모호 표현 없음 |
 | QG4 | Edge Case 2건 이상 | 최소 2개의 엣지 케이스 또는 위험 요소가 명시됨 |
+| QG5 | Intent Compliance | 계획이 사용자의 명시적+암묵적 요구를 모두 반영함. Intent Analysis(있으면) 교차 검증 |
 
 ---
 
@@ -83,7 +84,7 @@ For EVERY file reference:
 - Verify line numbers contain relevant code
 - Check that patterns are clear enough to follow
 
-### Step 3: Apply QG1-QG4 Gates
+### Step 3: Apply QG1-QG5 Gates
 
 ### Step 4: Apply Four Criteria Checks
 
@@ -115,6 +116,7 @@ VERDICT: REVISE
 - QG2 (Acceptance Criteria): PASS / FAIL
 - QG3 (모호어 0건): PASS / FAIL
 - QG4 (Edge Case 2건+): PASS / FAIL
+- QG5 (Intent Compliance): PASS / FAIL
 
 **Summary**:
 - Clarity: [Brief assessment]

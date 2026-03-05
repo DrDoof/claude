@@ -123,6 +123,7 @@ Phase 완료 후 `git status --short` 확인 → 변경사항 있으면 커밋.
 `--skip-analysis`로 스킵 가능.
 
 병렬 explore(haiku) x2: 문서 탐색 + 이슈 탐색. 결과 5줄 요약.
+analyst(sonnet) x1: 사용자 요청 의도 심층 분석 (명시적/암묵적 요구, 범위 경계, 위험 시나리오).
 
 ### Step 1.3: 계획 수립 (Graduated Plan Review)
 
@@ -133,8 +134,8 @@ Phase 완료 후 `git status --short` 확인 → 변경사항 있으면 커밋.
 | HEAVY | Planner-Critic Loop (max 5회) |
 
 **Lead Quality Gate** (LIGHT): plan 파일 존재+내용 있음, 파일 경로 1개+ 언급. 미충족 시 1회 재요청.
-**Critic-Lite** (STANDARD): QG1-QG4 검증 → APPROVE/REVISE. REVISE 시 1회 수정.
-**Planner-Critic Loop** (HEAVY): Planner → Architect 타당성 → Critic QG1-QG4 → 반복. 상세: `REFERENCE.md`
+**Critic-Lite** (STANDARD): QG1-QG5 검증 → APPROVE/REVISE. REVISE 시 1회 수정.
+**Planner-Critic Loop** (HEAVY): Planner → Architect 타당성 → Critic QG1-QG5 → 반복. 상세: `REFERENCE.md`
 
 산출물: `docs/01-plan/{feature}.plan.md`
 
@@ -210,13 +211,14 @@ LIGHT는 스킵. STANDARD/HEAVY: 계획 문서에 **아키텍처 결정 섹션**
 
 > LIGHT 모드: code-reviewer 스킵. Step 2.1 완료 후 바로 Phase 3 진입.
 
-### Step 2.3: Architect Verification Gate (STANDARD/HEAVY 필수)
+### Step 2.3: Architect Verification Gate + Gap Analysis (STANDARD/HEAVY 필수)
 
 architect (READ-ONLY) → 구현이 Plan 요구사항과 일치하는지 외부 검증.
+Architect APPROVE 후 gap-detector → 7개 항목 정량 비교 (Match Rate >= 90% 필수).
 
 | VERDICT | 처리 |
 |---------|------|
-| APPROVE | 유의미 변경 커밋 → Phase 3 진입 |
+| APPROVE | Step 2.3b Gap Analysis → 커밋 → Phase 3 진입 |
 | REJECT + DOMAIN | Step 2.4 Domain-Smart Fix |
 
 2회 REJECT → 사용자 알림 후 Phase 3 진입 허용.
