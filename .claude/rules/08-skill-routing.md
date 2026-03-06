@@ -7,7 +7,7 @@
 | 스킬 | 실행 방식 | 서브커맨드 |
 |------|----------|-----------|
 | `/auto` | 직접 실행 (PDCA orchestrator, Agent Teams 단일 패턴) | Phase 1-5, --gdocs, --mockup, --daily 등 |
-| `/check` | Agent Teams (QA 사이클) | --fix, --e2e, --perf, --security, --all |
+| `/check` | Agent Teams (QA 사이클) | --fix, --e2e, --perf, --security, --all, --react, --level |
 | `/debug` | Agent Teams (architect 분석) | D0-D4 Phase |
 | `/tdd` | Agent Teams (tdd-guide) | - |
 | `/parallel` | Agent Teams (병렬 executor) | dev, test, review, research, check |
@@ -36,6 +36,12 @@
 | `/cross-ai-verifier` | `/verify` |
 | `/issue-resolution` | `/issue fix` |
 | `/daily-sync` | `/daily` |
+| `skill-creator` | 삭제 (v23.0 감사) |
+| `pre-work-research` | `/research` |
+| `agent-teamworks` | `/auto` Agent Teams |
+| `final-check-automation` | `/check` |
+| `code-quality-checker` | `/check` (흡수 통합) |
+| `webapp-testing` | `playwright-wrapper` (흡수 통합) |
 
 ## 에이전트 티어 라우팅
 
