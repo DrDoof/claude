@@ -1,5 +1,6 @@
 ---
 name: prd-sync
+version: 1.0.0
 description: >
   This skill should be used when the user needs to synchronize PRD documents between Google Docs and local repository.
 triggers:

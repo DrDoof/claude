@@ -1,5 +1,6 @@
 ---
 name: jira
+version: 1.0.0
 description: >
   Jira 프로젝트, 보드, Epic, 이슈를 조회하고 분석한다. Atlassian REST API + Agile API 사용.
 triggers:

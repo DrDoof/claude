@@ -1,5 +1,6 @@
 ---
 name: chunk
+version: 1.0.0
 description: >
   This skill should be used when the user needs to split PDF files using token-based (text) or page-based (layout-preserving) chunking strategies.
 triggers:

@@ -1,5 +1,6 @@
 ---
 name: deploy
+version: 1.0.0
 description: >
   This skill should be used when the user requests version updates, Docker rebuilds, or deployment workflows.
 triggers:

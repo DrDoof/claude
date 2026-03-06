@@ -1,5 +1,6 @@
 ---
 name: audit
+version: 1.0.0
 description: >
   This skill should be used when the user requests daily configuration audits, improvement suggestions, or trend-based workflow optimization.
 triggers:

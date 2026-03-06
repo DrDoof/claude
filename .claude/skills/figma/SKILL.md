@@ -1,5 +1,6 @@
 ---
 name: figma
+version: 1.0.0
 description: >
   Figma MCP 연동 스킬. 5가지 모드: 디자인→코드 변환 (implement), 컴포넌트 매핑 (connect),
   디자인 시스템 규칙 생성 (rules), HTML→Figma 캡처 (capture), 인증 확인 (auth).

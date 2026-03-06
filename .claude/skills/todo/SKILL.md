@@ -1,5 +1,6 @@
 ---
 name: todo
+version: 1.0.0
 description: >
   This skill should be used when the user needs to manage project todos with priorities, due dates, and progress tracking.
 triggers:

@@ -1,5 +1,6 @@
 ---
 name: confluence
+version: 1.0.0
 description: >
   This skill should be used when the user needs to convert Markdown files to Confluence format and publish them to Confluence pages.
 triggers:
