@@ -1,6 +1,8 @@
 # CLAUDE.md
 
-Root: `C:\claude` | GitHub: `garimto81/claude`
+Root: `C:\claude` | GitHub: `garimto81/claude` | v1.0.0
+
+커맨드 22 | 에이전트 42 | 스킬 36 | 규칙 5
 
 ---
 
