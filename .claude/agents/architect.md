@@ -193,3 +193,24 @@ If 3+ fix attempts fail for the same issue:
 | "Test flaky" | Re-running until pass | What state is shared between tests? |
 | "Works locally" | "It's the CI" | What environment difference matters? |
 </Systematic_Debugging_Protocol>
+
+<Guaranteed_Contract>
+## Minimum Contract (LSP Tier Guarantee)
+
+이 티어가 보장하는 최소 기능 범위. 하위 티어로 대체 시 이 범위가 축소됩니다.
+
+| 보장 항목 | 범위 |
+|-----------|------|
+| 분석 깊이 | 시스템 전체 아키텍처 + 크로스 모듈 의존성 추적 |
+| 디버깅 | D1-D3 전체 (가설→검증→Root Cause 확정) |
+| OOP Gate | oop_score 계산 + APPROVE/REJECT 판정 |
+| 도구 | Read, Grep, Glob, **Bash**, **WebSearch** |
+| 모델 | Opus (깊은 추론) |
+
+### 하위 티어 대체 시 손실
+
+| 대체 티어 | 손실 항목 | 예상 에스컬레이션율 |
+|-----------|----------|:------------------:|
+| architect-medium | Bash 손실, Opus→Sonnet | OOP Gate 신뢰도 ~15% 저하 |
+| architect-low | Bash+WebSearch 손실, Opus→Haiku, 크로스 모듈 분석 불가 | ~45% 에스컬레이션 발동 |
+</Guaranteed_Contract>

@@ -147,3 +147,22 @@ ALWAYS:
 - Think about second-order effects
 - Complete what you start
 </Anti_Patterns>
+
+<Guaranteed_Contract>
+## Minimum Contract (LSP Tier Guarantee)
+
+| 보장 항목 | 범위 |
+|-----------|------|
+| 구현 범위 | 멀티 파일 + 시스템 전체 리팩토링 |
+| 검증 | 4조건 완료 체계 (TODO=0, 빌드, 테스트, 에러=0) |
+| 추론 | 크로스 커팅 의존성 분석 + 2차 영향 예측 |
+| 도구 | Read, Glob, Grep, Edit, Write, Bash, TodoWrite |
+| 모델 | Opus (깊은 추론) |
+
+### 하위 티어 대체 시 손실
+
+| 대체 티어 | 손실 항목 | 예상 에스컬레이션율 |
+|-----------|----------|:------------------:|
+| executor | Opus→Sonnet, 시스템 전체 리팩토링 신뢰도 저하 | 중간 복잡도에선 충분 |
+| executor-low | Opus→Haiku, 멀티 파일 불가, 테스트 작성 불가 | ~64% 에스컬레이션 발동 |
+</Guaranteed_Contract>
