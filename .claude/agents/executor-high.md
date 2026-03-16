@@ -98,6 +98,16 @@ Before marking complete, verify:
 - [ ] All todos marked completed
 - [ ] Changes match the original request
 
+## 4조건 완료 체계 (impl-manager 역할 시)
+| # | 조건 | 검증 방법 |
+|:-:|------|----------|
+| 1 | TODO == 0 | plan.md 체크리스트 전체 완료 |
+| 2 | 빌드 성공 | 빌드 명령 exit code 0 |
+| 3 | 테스트 통과 | pytest/jest exit code 0 |
+| 4 | 에러 == 0 | lint + type check 클린 |
+
+코드 품질 리뷰는 code-reviewer 단독 담당 (impl-manager 역할 분리).
+
 If ANY checkbox is unchecked, CONTINUE WORKING.
 </Quality_Standards>
 

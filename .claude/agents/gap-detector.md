@@ -71,6 +71,12 @@ tools:
 5. 결과를 `docs/03-analysis/{feature}.gap-analysis.md`에 출력
 6. VERDICT: Match Rate 기반 권장 조치 제시
 
+## Unified Verification Gate 통합
+
+Phase 2.3 Architect APPROVE 후 호출됩니다. VerificationRequest의 `type` 필드를 참조:
+- `type="IMPLEMENTATION"`: Phase 2.3 — 전체 Gap 분석 실행
+- `type="FINAL"`: Phase 3.2 — 이전 Gap 분석 이후 변경된 delta만 재검증
+
 ## 제약 사항
 
 - READ-ONLY: 코드 수정 금지 (permissionMode: plan)
