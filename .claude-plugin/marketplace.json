@@ -2028,10 +2028,13 @@
     },
     {
       "name": "meta-development",
-      "source": "davila7/claude-code-templates",
+      "source": "./plugins/meta-development",
       "description": "Meta agents for developing Claude Code components (agents, commands, MCPs). Includes agent-expert, command-expert, mcp-expert, cli-ui-designer, docusaurus-expert.",
       "version": "1.0.0",
-      "author": "davila7 + garimto81",
+      "author": {
+        "name": "davila7 + garimto81",
+        "url": "https://github.com/davila7/claude-code-templates"
+      },
       "homepage": "https://github.com/davila7/claude-code-templates",
       "repository": "https://github.com/davila7/claude-code-templates",
       "license": "MIT",
@@ -2047,150 +2050,38 @@
       "strict": true,
       "commands": [],
       "agents": [
-        {
-          "name": "agent-expert",
-          "description": "Agent development meta expert. Specializes in creating Claude Code agents.",
-          "path": ".claude/plugins/meta-development/agents/agent-expert.md"
-        },
-        {
-          "name": "command-expert",
-          "description": "Command development expert. Specializes in creating slash commands.",
-          "path": ".claude/plugins/meta-development/agents/command-expert.md"
-        },
-        {
-          "name": "mcp-expert",
-          "description": "MCP integration expert. Specializes in Model Context Protocol integrations.",
-          "path": ".claude/plugins/meta-development/agents/mcp-expert.md"
-        },
-        {
-          "name": "cli-ui-designer",
-          "description": "CLI UI design expert. Specializes in command-line interface design.",
-          "path": ".claude/plugins/meta-development/agents/cli-ui-designer.md"
-        },
-        {
-          "name": "docusaurus-expert",
-          "description": "Documentation expert. Specializes in Docusaurus and documentation systems.",
-          "path": ".claude/plugins/meta-development/agents/docusaurus-expert.md"
-        },
-        {
-          "name": "frontend-developer",
-          "description": "Frontend development specialist (davila7 version).",
-          "path": ".claude/plugins/meta-development/agents/frontend-developer.md"
-        }
-      ]
-    },
-    {
-      "name": "meta-development",
-      "source": "davila7/claude-code-templates",
-      "description": "Meta agents for developing Claude Code components (agents, commands, MCPs). Includes agent-expert, command-expert, mcp-expert, cli-ui-designer, docusaurus-expert.",
-      "version": "1.0.0",
-      "author": "davila7 + garimto81",
-      "homepage": "https://github.com/davila7/claude-code-templates",
-      "repository": "https://github.com/davila7/claude-code-templates",
-      "license": "MIT",
-      "keywords": [
-        "meta",
-        "agent-development",
-        "command-development",
-        "mcp",
-        "cli",
-        "documentation"
-      ],
-      "category": "Meta Development",
-      "strict": true,
-      "commands": [],
-      "agents": [
-        {
-          "name": "agent-expert",
-          "description": "Agent development meta expert. Specializes in creating Claude Code agents.",
-          "path": ".claude/plugins/meta-development/agents/agent-expert.md"
-        },
-        {
-          "name": "command-expert",
-          "description": "Command development expert. Specializes in creating slash commands.",
-          "path": ".claude/plugins/meta-development/agents/command-expert.md"
-        },
-        {
-          "name": "mcp-expert",
-          "description": "MCP integration expert. Specializes in Model Context Protocol integrations.",
-          "path": ".claude/plugins/meta-development/agents/mcp-expert.md"
-        },
-        {
-          "name": "cli-ui-designer",
-          "description": "CLI UI design expert. Specializes in command-line interface design.",
-          "path": ".claude/plugins/meta-development/agents/cli-ui-designer.md"
-        },
-        {
-          "name": "docusaurus-expert",
-          "description": "Documentation expert. Specializes in Docusaurus and documentation systems.",
-          "path": ".claude/plugins/meta-development/agents/docusaurus-expert.md"
-        },
-        {
-          "name": "frontend-developer",
-          "description": "Frontend development specialist (davila7 version).",
-          "path": ".claude/plugins/meta-development/agents/frontend-developer.md"
-        }
+        "./agents/agent-expert.md",
+        "./agents/command-expert.md",
+        "./agents/mcp-expert.md",
+        "./agents/cli-ui-designer.md",
+        "./agents/docusaurus-expert.md",
+        "./agents/frontend-developer.md"
       ]
     },
     {
       "name": "workflow-reviews",
-      "source": "OneRedOak/claude-code-workflows",
+      "source": "./plugins/workflow-reviews",
       "description": "Specialized review workflows for code, design, and security. Inspired by Anthropic's Claude Code development process and top Silicon Valley companies.",
       "version": "1.0.0",
-      "author": "Patrick Ellis (OneRedOak)",
-      "tags": [
-        "review",
-        "code-quality",
-        "security",
-        "design",
-        "workflow"
-      ],
+      "author": {
+        "name": "Patrick Ellis (OneRedOak)",
+        "url": "https://github.com/OneRedOak"
+      },
       "agents": [
-        {
-          "name": "pragmatic-code-review",
-          "path": ".claude/plugins/workflow-reviews/agents/pragmatic-code-review.md",
-          "description": "Principal Engineer reviewer with 7-tier hierarchical review framework (Architecture, Functionality, Security, Maintainability, Testing, Performance, Dependencies)",
-          "model": "opus"
-        },
-        {
-          "name": "design-review",
-          "path": ".claude/plugins/workflow-reviews/agents/design-review.md",
-          "description": "Elite design review specialist using Playwright CLI for live environment testing (7 phases: Interaction, Responsiveness, Visual Polish, Accessibility, Robustness, Code Health, Console)",
-          "model": "sonnet"
-        }
+        "./agents/pragmatic-code-review.md",
+        "./agents/design-review.md"
       ],
       "commands": [
-        {
-          "name": "pragmatic-code-review",
-          "path": ".claude/plugins/workflow-reviews/commands/pragmatic-code-review.md",
-          "description": "Conduct comprehensive code review of pending changes using Pragmatic Quality framework"
-        },
-        {
-          "name": "design-review",
-          "path": ".claude/plugins/workflow-reviews/commands/design-review.md",
-          "description": "Perform world-class design review on UI changes with Playwright automated testing"
-        },
-        {
-          "name": "security-review",
-          "path": ".claude/plugins/workflow-reviews/commands/security-review.md",
-          "description": "Execute focused security review based on OWASP Top 10 with high-confidence vulnerability detection"
-        }
+        "./commands/pragmatic-code-review.md",
+        "./commands/design-review.md",
+        "./commands/security-review.md"
       ],
-      "features": [
-        "Dual-loop architecture (slash commands + GitHub Actions)",
-        "Live environment testing with Playwright CLI",
-        "OWASP Top 10 security scanning",
-        "WCAG 2.1 AA accessibility compliance",
-        "Hierarchical review framework (7 tiers)",
-        "Pragmatic Quality methodology"
-      ],
-      "use_cases": [
-        "Automated PR code review",
-        "UI/UX consistency validation",
-        "Security vulnerability detection",
-        "Accessibility compliance checking",
-        "Design system adherence"
-      ]
+      "category": "development",
+      "strict": false,
+      "license": "MIT",
+      "keywords": [],
+      "homepage": "https://github.com/OneRedOak/claude-code-workflows",
+      "repository": "https://github.com/OneRedOak/claude-code-workflows"
     }
   ]
 }
